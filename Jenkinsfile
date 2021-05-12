@@ -16,6 +16,11 @@ pipeline {
 				echo "deployment stage is completed"
 			}
 			}
+			stage ('staging') {
+				steps {
+					echo "staging is completed"
+				}
+			}
 
 		}
 
