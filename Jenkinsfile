@@ -1,9 +1,13 @@
 pipeline {
-	agent any
+	//agent any
+	agent {docker {image 'maven:3.6'} }
+	agent {docker {image 'nodejs:10'}}
 		stages {
-			stage ('build') {
+			stage ('checkout') {
 				steps {
-				echo "build stage is completed"
+					sh 'mvn --version'
+					sh 'node --version'
+				echo "checkout stage is completed"
 			}
 			}
 			stage ('test') {
@@ -24,7 +28,7 @@ pipeline {
 			}
 			stage ('deploy') {
 				steps{
-					echo "deploy stage completedx"
+					echo "deploy stage completed"
 				}
 				
 			}
