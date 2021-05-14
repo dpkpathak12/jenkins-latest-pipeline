@@ -20,9 +20,9 @@ pipeline {
 				steps {
 					echo "staging is completed"
 
-			stage ('deploy')
+			stage ('deploy') {
 				steps{
-					echo "deploy stage completed"
+					echo "deploy stage completedx"
 				}
 				}
 			}
