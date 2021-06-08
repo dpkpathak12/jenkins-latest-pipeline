@@ -1,7 +1,15 @@
 pipeline {
 	//agent any
-	agent { docker { image "maven:6.3.0"} }
-	//agent {docker {image 'nodejs:10'}}
+	agent { 
+	     docker { 
+		     image 'maven:6.3.0'
+	     } 
+	}
+	agent { 
+		docker { 
+			image 'nodejs:10'
+		}
+	}
 		stages {
 			stage ('checkout') {
 				steps {
