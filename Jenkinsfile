@@ -18,9 +18,9 @@ pipeline {
 		stage('checkout') {
 			steps {
 				
-				//sh "docker version"
+				sh "docker version"
 				//sh "chmod 777 -R /var/jenkins_home/workspace/jenkins-devops-pipeline@tmp/durable*"
-				//sh "mvn --version"
+				sh "mvn --version"
 				
 				echo "Build"
 
